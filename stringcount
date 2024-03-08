@@ -1,0 +1,43 @@
+// Online Java Compiler
+// Usor to write, compile and run your Java code online
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        StringBuilder s1=new StringBuilder("ABCabc123@#");
+        int c1=0,c2=0,c3=0,c4=0,i=0;
+        System.out.println(s1);
+        int[] arr=new int[15];
+        for(i=0;i<s1.length();i++)
+        {
+         int result = s1.codePointAt(i); 
+         arr[i]=result;
+       //  System.out.println(arr[i]);
+        
+
+        if(arr[i]>=65&&arr[i]<=90){
+            c1++;
+        }
+        
+        else if(arr[i]>=97 && arr[i]<=122){
+                c2++;}
+                else if(arr[i]>=48&&arr[i]<=57){
+                    c3++;
+               }
+            else{
+                c4++;
+            }
+        }
+                    System.out.println("Capital  "+ c1);
+                      System.out.println("small  "+c2);
+                      System.out.println("number  "+c3);
+                      System.out.println("symbol  "+c4);
+
+
+
+ 
+        
+
+}
+}
