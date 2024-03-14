@@ -1,0 +1,92 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Emp{
+    int empid;
+    String empname;
+    double nfw;
+    double hp,gross;
+    Scanner sc= new Scanner(System.in);
+   
+    
+    void Setempid(){
+                     System.out.println("enter emp id");
+
+            empid=sc.nextInt();
+   
+    }
+    void Getempid(){
+             System.out.println(empid);
+   
+    }
+    void Setempname()
+    {
+                     System.out.println("enter emp name");
+
+          empname=sc.next();
+    
+    }
+    void Getempname()
+    {
+             System.out.println(empname);
+
+    }
+    void Setnfw()
+    {
+                     System.out.println("enter no of hours worked");
+
+            nfw=sc.nextDouble();
+
+    }
+     void Getnfw()
+    {
+             System.out.println(nfw);
+
+    }
+    void Sethourlyprice()
+    {
+             System.out.println("enter hourly price");
+
+            hp=sc.nextDouble();
+ 
+    }
+    void Gethourlyprice()
+    {
+             System.out.println(hp);
+ 
+    }
+    void Grosssal()
+    {
+        gross=nfw*hp;
+        System.out.println("gross sal of an emp is: "+gross);
+    }
+    void Netsal(){
+        double temp;
+        temp=gross*30;
+        if(temp>30000){
+            temp=temp-(0.05*temp);
+            System.out.println("Net salary of emp is: "+temp);
+        }
+        else{
+                 System.out.println("Net salary of emp is: "+temp);
+
+        }
+        
+    }
+    
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        Emp e=new Emp();
+        e.Setempid();
+        e.Getempid();
+        e.Setempname();
+        e.Getempname();
+        e.Setnfw();
+        e.Getnfw();
+        e.Sethourlyprice();
+        e.Gethourlyprice();
+        e.Grosssal();
+        e.Netsal();
+    }
+}
